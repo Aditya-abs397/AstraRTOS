@@ -4,18 +4,18 @@
 #include <stdint.h>
 #include <stddef.h>
 
-typedef struct os_queue_node{
+typedef struct os_queue_node {
     struct os_queue_node *next;
     uint8_t data[];
-}os_queue_node_t;
+} os_queue_node_t;
 
-typedef struct{
+typedef struct {
     os_queue_node_t *head;
     os_queue_node_t *tail;
     uint32_t item_size;
     uint32_t count;
     uint32_t max_count;
-}os_queue_t;
+} os_queue_t;
 
 void os_queue_init(os_queue_t *q, uint32_t item_size, uint32_t max_count);
 int os_queue_send(os_queue_t *q, const void *data);

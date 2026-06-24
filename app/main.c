@@ -1,8 +1,6 @@
 // AstraRTOS - main kernel
 
-void main(void){
-    while(1){
-
-
+void main(void) {
+    while(1) {
     }
 }

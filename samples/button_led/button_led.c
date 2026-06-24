@@ -13,9 +13,10 @@ void button_task(void) {
     gpio_set_mode(LED_PORT, LED_PIN, GPIO_MODE_OUTPUT);
     gpio_set_mode(BUTTON_PORT, BUTTON_PIN, GPIO_MODE_INPUT);
     while(1) {
-        if(gpio_read(BUTTON_PORT, BUTTON_PIN)){
+        if(gpio_read(BUTTON_PORT, BUTTON_PIN)) {
             gpio_write(LED_PORT, LED_PIN, 1);
-        }else{
+        }
+        else {
             gpio_write(LED_PORT, LED_PIN, 0);
         }
     }

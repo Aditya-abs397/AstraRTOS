@@ -1,8 +1,9 @@
 #include "stats.h"
 #include "task.h"
 extern uint32_t os_get_task_count();
-int os_task_get_stats(int task_num, os_task_stats_t *stats){
-    if(task_num < 0 || (uint32_t)task_num >= os_get_task_count()){
+
+int os_task_get_stats(int task_num, os_task_stats_t *stats) {
+    if(task_num < 0 || (uint32_t)task_num >= os_get_task_count()) {
         return -1;
     }
     stats->task_num = task_num;
