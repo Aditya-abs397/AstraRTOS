@@ -6,7 +6,9 @@ typedef enum {
     TASK_READY,
     TASK_BLOCKED,
     TASK_MUTEX_WAITING,
-    TASK_SEM_WAITING
+    TASK_SEM_WAITING,
+    TASK_QUEUE_SEND_WAITING,
+    TASK_QUEUE_RECV_WAITING
 }os_task_state;
 typedef struct {
     uint32_t *stack_ptr;
