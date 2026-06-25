@@ -10,7 +10,7 @@ typedef struct heap_block {
 } heap_block_t;
 
 void os_heap_init();
-void* os_malloc(uint32_t size);
-void os_mfree(void* mem);
+void *os_malloc(uint32_t size);
+void os_mfree(void *mem);
 
 #endif

@@ -2,7 +2,7 @@
 #define H_MUTEX
 #include "stdint.h"
 
-typedef struct{
+typedef struct {
     int is_locked;
     int task_num_owner;
     int recursive_depth;

@@ -2,6 +2,7 @@
 #define H_TASK
 #include <stdint.h>
 #define OS_MAX_TASKS_NUM 20
+
 typedef enum {
     TASK_READY,
     TASK_BLOCKED,
@@ -9,7 +10,8 @@ typedef enum {
     TASK_SEM_WAITING,
     TASK_QUEUE_SEND_WAITING,
     TASK_QUEUE_RECV_WAITING
-}os_task_state;
+} os_task_state;
+
 typedef struct {
     uint32_t *stack_ptr;
     uint32_t *stack_base;
@@ -22,7 +24,8 @@ typedef struct {
     uint32_t base_priority;
     uint32_t run_count;
     uint32_t stack_high_water;
-}os_tcb_t;
+} os_tcb_t;
+
 extern os_tcb_t *os_tasks[];
 extern os_tcb_t *os_current_task_ptr;
 void os_delay(uint32_t t);

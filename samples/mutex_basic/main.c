@@ -11,19 +11,19 @@ static void uint_to_str(uint32_t value, char *buf) {
     char tmp[12];
     int i = 0;
 
-    if (value == 0) {
+    if(value == 0) {
         buf[0] = '0';
         buf[1] = '\0';
         return;
     }
 
-    while (value > 0) {
+    while(value > 0) {
         tmp[i++] = (char)('0' + (value % 10));
         value /= 10;
     }
 
     int j = 0;
-    while (i > 0) {
+    while(i > 0) {
         buf[j++] = tmp[--i];
     }
     buf[j] = '\0';
@@ -32,7 +32,7 @@ static void uint_to_str(uint32_t value, char *buf) {
 void task1(void) {
     char num_str[12];
 
-    while (1) {
+    while(1) {
         os_mutex_take(&counter_mutex);
 
         shared_counter++;
@@ -49,7 +49,7 @@ void task1(void) {
 void task2(void) {
     char num_str[12];
 
-    while (1) {
+    while(1) {
         os_mutex_take(&counter_mutex);
 
         shared_counter++;

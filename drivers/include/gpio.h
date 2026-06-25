@@ -12,12 +12,12 @@
 #define GPIOG_BASE 0x40021800
 #define GPIOH_BASE 0x40021C00
 
-#define GPIO_MODER(base) (*(volatile uint32_t*)((base) + 0x00))
-#define GPIO_IDR(base) (*(volatile uint32_t*)((base) + 0x10))
-#define GPIO_ODR(base) (*(volatile uint32_t*)((base) + 0x14))
-#define GPIO_BSRR(base) (*(volatile uint32_t*)((base) + 0x18))
-#define GPIO_AFRL(base) (*(volatile uint32_t*)((base) + 0x20))
-#define GPIO_AFRH(base) (*(volatile uint32_t*)((base) + 0x24))
+#define GPIO_MODER(base) (*(volatile uint32_t *)((base) + 0x00))
+#define GPIO_IDR(base) (*(volatile uint32_t *)((base) + 0x10))
+#define GPIO_ODR(base) (*(volatile uint32_t *)((base) + 0x14))
+#define GPIO_BSRR(base) (*(volatile uint32_t *)((base) + 0x18))
+#define GPIO_AFRL(base) (*(volatile uint32_t *)((base) + 0x20))
+#define GPIO_AFRH(base) (*(volatile uint32_t *)((base) + 0x24))
 
 #define GPIO_MODE_INPUT 0
 #define GPIO_MODE_OUTPUT 1
