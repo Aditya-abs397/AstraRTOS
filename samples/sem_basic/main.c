@@ -65,7 +65,6 @@ int main(void) {
     system_init();
     systick_init();
     uart_init(UART_BASE);
-    uart_send_string(UART_BASE, "AstraRTOS: boot ok\r\n");
 
     os_heap_init();
     os_sem_init(&resource_sem, MAX_CONCURRENT_USERS, MAX_CONCURRENT_USERS);
