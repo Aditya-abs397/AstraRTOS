@@ -32,7 +32,7 @@ uint16_t adc_read(void)
     {
         ADC_CR2(ADC1_BASE) |= ADC_CR2_SWSTART;
         while(!(ADC_SR(ADC1_BASE) & ADC_SR_EOC)); //Wait until conversion is complete
-        return uint16_t(ADC_DR(ADC1_BASE));
+        return (uint16_t)ADC_DR(ADC1_BASE);
     }
     
 }
