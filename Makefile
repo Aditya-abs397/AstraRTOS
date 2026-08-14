@@ -22,6 +22,7 @@ ASFLAGS = $(MCU) -Wall
 LDFLAGS = $(MCU) -T$(LDSCRIPT) -nostdlib -nostartfiles -Wl,--gc-sections -Wl,-Map=$(BUILD)/$(TARGET).map
 
 C_OBJECTS = $(addprefix $(BUILD)/, $(C_SOURCES:.c=.o))		# replace main.c with main.o	
+C_OBJECTS += $(addprefix $(BUILD)/, $(SOURCE:.c=.o))
 AS_OBJECTS = $(addprefix $(BUILD)/, $(AS_SOURCES:.s=.o))	# creates startup_stm32f429zi.o
 
 OBJECTS = $(C_OBJECTS) $(AS_OBJECTS)

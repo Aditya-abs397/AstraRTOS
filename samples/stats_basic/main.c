@@ -76,7 +76,6 @@ void addition_task(void) {
 
 int main(void) {
     system_init();
-    systick_init();
     uart_init(UART_BASE);
     os_heap_init();
     os_mutex_init(&uart_mutex);

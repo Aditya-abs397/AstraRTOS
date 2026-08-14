@@ -63,7 +63,6 @@ void task_d(void) {
 
 int main(void) {
     system_init();
-    systick_init();
     uart_init(UART_BASE);
 
     os_heap_init();
