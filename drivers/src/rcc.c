@@ -49,7 +49,7 @@ void rcc_disable_uart(uint8_t uart) {
     }
 }
 
-void rcc_enable_adc(uint*_t adc) {
+void rcc_enable_adc(uint8_t adc) {
     switch(adc) {
     case ADC1_EN:
         RCC_APB2ENR |= (1 << 8);
@@ -63,7 +63,7 @@ void rcc_enable_adc(uint*_t adc) {
     }
 }
 
-void rcc_disable_adc(uint*_t adc) {
+void rcc_disable_adc(uint8_t adc) {
     switch(adc) {
     case ADC1_EN:
         RCC_APB2ENR &= ~(1 << 8);
@@ -76,4 +76,3 @@ void rcc_disable_adc(uint*_t adc) {
         break;
     }
 }
-

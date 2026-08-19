@@ -4,6 +4,7 @@
 #include <stdint.h>
 
 #define ADC1_BASE 0x40012000
+#define ADC_CH_NUM 5
 
 #define ADC_SR(base) (*(volatile uint32_t *)((base) + 0x00))
 #define ADC_CR1(base) (*(volatile uint32_t *)((base) + 0x04))
@@ -22,5 +23,8 @@
 #define ADC_CR2_CONT (1 << 1)
 #define ADC_CR2_ALIGN (1 << 11)
 
-void adc_init();
+void adc_init(void);
+uint16_t adc_read_channel(uint8_t channel);
+void adc_read(uint16_t out[ADC_CH_NUM]);
+
 #endif

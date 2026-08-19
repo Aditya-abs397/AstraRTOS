@@ -27,7 +27,6 @@
 #define ADC2_EN 2
 #define ADC3_EN 3
 
-
 void rcc_enable_gpio(uint8_t port);
 void rcc_disable_gpio(uint8_t port);
 void rcc_enable_uart(uint8_t uart);
